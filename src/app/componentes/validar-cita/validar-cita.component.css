@@ -1,0 +1,66 @@
+.menu{
+    background-color: #572364;
+    color: white;
+    font-size: 17px;
+    font-weight:500;
+    text-decoration: underline;
+}
+
+u{
+    color: #572364;
+}
+
+#activo{
+    font-size: 19px;
+}
+
+h5{
+    font-size: 21px;
+    font-family: Helvetica;
+    font-weight: 600;
+    color: white;
+}
+
+.card-header{
+    background-color: #8ac8ff;
+}
+
+#formulario{
+    background-color: #d3deee;
+}
+
+/*ETIQUETAS*/
+.col-form-label{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #572364;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+/*BÓTON*/
+.btn-warning{
+    width: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-weight:600;
+    font-size: 17px;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+}
+
+/*ICONO BOTÓN GUARDAR*/
+.fa-solid{
+    padding-right: 10px;
+}
+
+/*CARD*/
+.card{
+    padding: 20px 30px 30px;
+    margin-top: 80px;
+}

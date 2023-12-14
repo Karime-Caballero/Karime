@@ -1,0 +1,100 @@
+    
+
+
+<header>
+    
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-20">
+                <nav class="navbar navbar-expand" style="background-color: #cdbecf;">
+                    <header class="main-header">
+                        <label for="btn-nav" class="btn-nav"><i class="fas fa-bars" style="float: none; "></i></label>
+                        <input type="checkbox" id="btn-nav" style="float: none; ">
+                        
+                        <nav class="la">
+                          <ul class="navigation" style="font-weight: bold; color: #cdbecf;">
+                            <li><a href="">Home</a></li>
+                            <li><a href="/Tienda">Tienda</a></li>
+                            <li><a href="/nosotros">Nosotros</a></li>
+                            <li><a href="">Contacto</a></li>
+                          </ul>
+                        </nav>
+                        
+                      </header>
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="../../../assets/logos/logo-psicositas-5.png" alt="Avatar Logo" style="width:250px;">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav ml-auto">
+                                <a href="/login" class="cta btn" style="margin: 5px">Accede</a>
+                                <a href="/registro" class="cta btn" style="margin: 5px">Registrarse</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+  </header>
+  <body>
+   
+        <div class="container lol  mt-5" >
+            <div class="card mi-contenedor container-fluid">
+                <h1 class="text-center"><strong class="mt-4">Nuestro Equipo</strong></h1>
+                <div class="card-group">
+                    <div class="card">
+                      <img src="./../../../assets/logos/psicologo.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Psicologa Norma</h5>
+                        <p class="card-text">Soy psicopedagoga y mis horarios de atencion son de 8:00 am  - 4:00 pm.</p>
+                        
+                      </div>
+                    </div>
+                    <div class="card">
+                        <img src="./../../../assets/logos/psicologo.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Pedagoga Natalia</h5>
+                        <p class="card-text">Soy pedagoga y mis horarios de atencion son de 8:00 am  - 4:00 pm.</p>
+                        <p class="card-text"><small class="text-muted">Puedes regular tus horarios conmigo y apreder a administrar tu tiempo</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                        <img src="./../../../assets/logos/psicologo.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Psicologa Edith</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        
+                      </div>
+                      
+                    </div>
+                   
+                  </div>
+                
+            </div>
+        </div>
+   
+        
+  </body>
+  
+
+
+
+<div class="container mi-contenedor2 text-center mt-2 container-fluid">
+    <div class="card  ">
+        <h1 class="mt-4 title"><strong>Psicositas</strong></h1>
+        <div class="container mt-2">
+            <div class="row">
+                <div *ngFor="let v of videos" class="col-4">
+                <youtube-player [videoId]="v.video" suggestedQuality="highres" [height]="200" [width]="300">
+                </youtube-player>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

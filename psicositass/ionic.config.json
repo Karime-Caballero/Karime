@@ -1,0 +1,7 @@
+{
+  "name": "psicositass",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

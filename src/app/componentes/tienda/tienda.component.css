@@ -1,0 +1,28 @@
+img {
+    width: 200pt;
+    margin: 2%;
+}
+
+.card-img-top {
+    object-fit: contain;
+    /* Ajustar la imagen al contenedor */
+    max-height: 200px;
+    /* Altura máxima de la imagen */
+    margin: auto;
+    /* Centrar horizontalmente */
+    display: block;
+    /* Hacer que la imagen sea un bloque */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card-title,
+.card-text {
+    text-align: center;
+}

@@ -1,0 +1,15 @@
+nav{
+    background-color: #cdbecf;
+    height: auto;
+}
+
+.img{
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente al centro */
+    align-items: center; /* Alinea verticalmente al centro */
+    background-color: #cdbecf; /* Fondo del contenedor */
+}
+
+img{
+    padding: 1px;
+}

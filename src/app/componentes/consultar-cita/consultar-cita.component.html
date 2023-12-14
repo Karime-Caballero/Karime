@@ -1,0 +1,58 @@
+<div class="row-sm"> <!-- CUERPO -->
+    <app-barra-cita></app-barra-cita>
+    <div class="menu">
+        <ul class="nav nav-tabs nav-fill">
+            <li class="nav-item">
+                <a class="nav-link disable" aria-current="page" href="/agendar-cita" style="color: white;">Nueva
+                    Cita</a>
+            </li>
+            <li class="nav-item">
+                <u><a class="nav-link active" aria-current="page" href="/consultar-cita"
+                        style="background-color: #e6dee7; color: #572364;">Consultar</a></u>
+            </li>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <form #consultarForm="ngForm">
+        <!-- CARD -->
+        <div class="col-md-10 mb-4 mx-auto my-auto">
+            <div class="card mb-4" id="formulario">
+                <div class="card-header py-3 text-center">
+                    <h5 class="mb-0">Citas</h5>
+                </div>
+                <div class="card-body">
+                        <!-- ID CITA -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID Cita</th>
+                                    <th scope="col">Psicologo</th>
+                                    <th scope="col">Consultorio</th>
+                                    <th scope="col">Ubicación</th>
+                                    <th scope="col">Modalidad</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Hora</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Pago</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of consultarCitaService.consultarCitas">
+                                    <th scope="row">{{item.idCita}}</th>
+                                    <td>{{item.nombrePsi + " " + item.apPaternoPsi + " " }}</td>
+                                    <td>{{item.nomConsultorio}}</td>
+                                    <td>{{item.ubicacion}}</td>
+                                    <td>{{item.nomModalidad}}</td>
+                                    <td>{{item.dia+"/"+item.mes+"/"+item.anio}}</td>
+                                    <td>{{item.horario}}</td>
+                                    <td>{{item.status}}</td>
+                                    <td><a href="/pago" class="btn btn-primary">Pagar</a></td>
+                                </tr>                                
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>    
+</div>

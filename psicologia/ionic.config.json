@@ -1,0 +1,7 @@
+{
+  "name": "Psicología",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

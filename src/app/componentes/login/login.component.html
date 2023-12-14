@@ -1,0 +1,48 @@
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+            <div class="col-md-7 col-lg-5 col-xl-5">
+                <div class="text-center mb-4">
+                    <h2>Iniciar Sesión</h2>
+                </div>
+                <form #loginForm="ngForm" (ngSubmit)="valLog(loginForm)">
+
+                    <!-- idUser input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="id_usuario">Número de control</label>
+                        <input name="id_usuario" type="text" id="id_usuario" class="form-control form-control-lg" [(ngModel)]="loginService.login.id_usuario" required #id_usuario="ngModel">
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="password">Contraseña</label>
+                        <input name="password"  type="password" id="password" class="form-control form-control-lg" [(ngModel)]="loginService.login.password" required #password="ngModel">
+                    </div>
+
+                    <!-- Submit button -->
+                    <!-- <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-primary float: right;" [disabled]="loginForm.invalid">Entrar
+                            <span class="position-absolute top-50 start-1 traslate-middle badge bg-danger text-dark" [hidden]="loginForm.valid">Necesitas llenar todos los campos</span>
+                        </button>
+                    </div> -->
+
+                    <button type="submit" class="btn btn-secondary position-relative" [disabled]="loginForm.invalid">Login <span
+                            class="position-absolute top-50 start-1 translate-middle badge bg-danger text-dark" [hidden]="loginForm.valid">
+                    
+                            Necesitas llenar todos los campos
+                    
+                        </span>
+                    
+                    </button>
+
+                </form>
+
+                <p class="text-center">¿No tienes una cuenta? <a class="nav-link" href="/registrarse">Regístrate</a></p>
+            </div>
+            <div class="col-md-8 col-lg-7 col-xl-6 offset-xl-1">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                    class="img-fluid" alt="Phone image">
+            </div>
+        </div>
+    </div>
+</section>

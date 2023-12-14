@@ -1,0 +1,89 @@
+<div class="row-sm"> <!-- CUERPO -->
+  <app-barra-cita></app-barra-cita>
+  <div class="menu">
+    <ul class="nav nav-tabs nav-fill">
+      <li class="nav-item">
+        <u><a class="nav-link active" id="activo" aria-current="page" href="/agendar-cita"
+            style="background-color: #e6dee7; color: #572364;">Nueva Cita</a></u>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/consultar-cita" style="color: white;">Consultar</a>
+      </li>
+    </ul>
+  </div>
+  <div class="container-fluid">
+    <!--CARD-->
+    <div class="col-md-8 mb-4 mx-auto my-auto">
+      <div class="card mb-4" id="formulario">
+        <div class="card-header py-3 text-center">
+          <h5 class="mb-0">Detalles de la cita</h5>
+        </div>
+        <div class="card-body">
+          <form #citaForm="ngForm" (ngSubmit)="createCita(citaForm)">
+            <!-- ID CITA -->
+            <div class="form-outline mb-4">
+              <div class="col-sm-3">
+                <label for="id-cita" class="col-form-label">ID Cita:</label>
+              </div>
+              <div class="col-sm">
+                <input type="text" id="id-cita" class="form-control" placeholder="" name="id_libro">
+              </div>
+            </div>
+
+            <!-- NÚMERO CONTROL -->
+            <div class="form-outline mb-4">
+              <div class="col-sm">
+                <label for="num-control" class="col-form-label">Número de control:</label>
+              </div>
+              <div class="col-sm">
+                <input type="text" id="id-cita" class="form-control" placeholder="Ingresa Número de Control"
+                  name="id_libro">
+              </div>
+            </div>
+
+            <!-- PSICOLOGO -->
+            <div class="form-outline mb-4">
+              <div class="col-sm">
+                <label for="psicologo" class="col-form-label">Psicologo:</label>
+              </div>
+              <div class="col-sm">
+                <select class="form-select" id="psicologo" placeholder="Selecciona psicologo" name="idPsicologo" [(ngModel)]="citaService.cita.idPsicologo">
+                  <option selected>Selecciona psicologo...</option>
+                  <option *ngFor="let item of psicologoService.psicologos" [value]="item.idPsicologo">{{item.nombrePsi+' '+item.apPaternoPsi+' '+item.apMaternoPsi}}</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- MODALIDAD -->
+            <div class="form-outline mb-4">
+              <div class="col-sm">
+                <label for="modalida" class="col-form-label">Modalidad:</label>
+              </div>
+              <div class="col-sm">
+                <select class="form-select" id="modalidad" placeholder="Selecciona modalidad" name="id_editorial">
+                  <option selected>Selecciona modalidad...</option>
+                  <option *ngFor="let item of modalidadService.modalidades" [value]="item.idModalidad"> {{item.nomModalidad}}</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- MOTIVO -->
+            <div class="form-outline mb-4">
+              <div class="col-sm">
+                <label for="motivo" class="col-form-label">Motivo:</label>
+              </div>
+              <div class="col-sm">
+                <input type="text" id="motivo" class="form-control" placeholder="Escribe el motivo..." name="id_libro">
+              </div>
+            </div>
+            <div class="row boton"> <!-- BOTÓN GUARDAR-->
+              <button type="button" class="btn btn-warning" type="submit">
+                <i class="fa-solid fa-floppy-disk" style="color: #FFFFFF;"></i> Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
